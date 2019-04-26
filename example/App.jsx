@@ -15,7 +15,7 @@ class App extends Component {
           backgroundColor: '#f44336',
           position: 'relative'
         }}>
-          <LoadingEffect in={this.state.in} variant='lazyStretch' />
+          <LoadingEffect in={this.state.in} variant='jammedBlind' />
         </div>
         <div style={{
           height: '50vh',
@@ -31,7 +31,7 @@ class App extends Component {
           backgroundColor: '#f44336',
           position: 'relative'
         }}>
-          <LoadingEffect in={this.state.in} variant='spill' />
+          {/* <LoadingEffect in={this.state.in} variant='spill' /> */}
         </div>
         <div style={{
           height: '50vh',
@@ -39,7 +39,7 @@ class App extends Component {
           backgroundColor: '#f44336',
           position: 'relative'
         }}>
-          <LoadingEffect in={this.state.in} variant='frameIt' />
+          {/* <LoadingEffect in={this.state.in} variant='frameIt' /> */}
         </div>
       </div>
     )
@@ -50,11 +50,14 @@ class App extends Component {
   }
 
   componentDidMount () {
+    this.setState({
+      in: !this.state.in
+    })
     setInterval(() => {
       this.setState({
         in: !this.state.in
       })
-    }, 2000)
+    }, 3000)
   }
 }
 
