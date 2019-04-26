@@ -8,7 +8,7 @@ class LoadingEffect extends Component {
     const { variant } = this.props
     const {
       svgPreserveAspectRatio,
-      pathD
+      initialPath
     } = (variantTable[variant] || variant)
     return (
       <div ref={this.loaderRef} className='pageload-overlay'>
@@ -16,7 +16,7 @@ class LoadingEffect extends Component {
           width='100%' height='100%' viewBox='0 0 80 60'
           preserveAspectRatio={svgPreserveAspectRatio}
         >
-          <path d={pathD} />
+          <path d={initialPath} />
         </svg>
       </div>
     )
@@ -80,7 +80,7 @@ class LoadingEffect extends Component {
     } = this.props
     const {
       openingSteps,
-      closingSteps = openingSteps,
+      closingSteps = [this.initialPath],
       speedIn: variantSpeedIn,
       speedOut: variantSpeedOut,
       easingIn: variantEasingIn,
