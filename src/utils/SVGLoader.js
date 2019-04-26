@@ -10,6 +10,37 @@
  */
 import Snap from 'snapsvg'
 import * as classie from './classes'
+
+// class SVGLoader {
+//   constructor(element, {
+//     openingSteps,
+//     closingSteps
+//   }) {
+//     this.element = element
+//     const snap = Snap(this.el.querySelector('svg'))
+//     this.path = snap.select('path')
+//     this.initialPath = this.path.attr('d')
+//     var openingStepsStr = this.el.getAttribute('data-opening')
+//     this.openingSteps = openingStepsStr ? openingStepsStr.split(';') : ''
+//     this.openingStepsTotal = openingStepsStr ? this.openingSteps.length : 0
+//     if (this.openingStepsTotal === 0) return
+
+//     // if data-closing is not defined then the path will animate to its original shape
+//     var closingStepsStr = this.el.getAttribute('data-closing') ? this.el.getAttribute('data-closing') : this.initialPath
+//     this.closingSteps = closingStepsStr ? closingStepsStr.split(';') : ''
+//     this.closingStepsTotal = closingStepsStr ? this.closingSteps.length : 0
+
+//     this.isAnimating = false
+
+//     if (!this.options.speedOut) {
+//       this.options.speedOut = this.options.speedIn
+//     }
+//     if (!this.options.easingOut) {
+//       this.options.easingOut = this.options.easingIn
+//     }
+//   }
+// }
+
 function SVGLoader (el, options) {
   this.el = el
   Object.assign(this.options, options)

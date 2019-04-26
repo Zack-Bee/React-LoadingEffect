@@ -15,7 +15,7 @@ class App extends Component {
           backgroundColor: '#f44336',
           position: 'relative'
         }}>
-          <LoadingEffect in={this.state.in} />
+          <LoadingEffect in={this.state.in} variant='lazyStretch' />
         </div>
         <div style={{
           height: '50vh',
@@ -23,7 +23,7 @@ class App extends Component {
           backgroundColor: '#f44336',
           position: 'relative'
         }}>
-          <LoadingEffect in={this.state.in} />
+          <LoadingEffect in={this.state.in} variant='circle' />
         </div>
         <div style={{
           height: '50vh',
@@ -31,7 +31,7 @@ class App extends Component {
           backgroundColor: '#f44336',
           position: 'relative'
         }}>
-          <LoadingEffect in={this.state.in} />
+          <LoadingEffect in={this.state.in} variant='spill' />
         </div>
         <div style={{
           height: '50vh',
@@ -39,7 +39,7 @@ class App extends Component {
           backgroundColor: '#f44336',
           position: 'relative'
         }}>
-          <LoadingEffect in={this.state.in} />
+          <LoadingEffect in={this.state.in} variant='frameIt' />
         </div>
       </div>
     )
